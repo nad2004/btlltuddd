@@ -9,10 +9,10 @@ app.use(cors());
 
 const JWT_SECRET = 'NAD';
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'crud'
+    host: 'sql12.freemysqlhosting.net',
+    user: 'sql12732241',
+    password: 'D7hQL6LuQD',
+    database: 'sql12732241'
 });
 
 
@@ -47,7 +47,7 @@ app.post('/login', (req, res) => {
         return res.status(400).json({ message: 'Username and password are required' });
     }
 
-    const sql = "SELECT * FROM login WHERE username = ? AND password = ?";
+    const sql = "SELECT * FROM account WHERE username = ? AND password = ?";
     db.query(sql, [username, password], (err, data) => {
         if (err) {
             console.error('Database error:', err);
