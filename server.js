@@ -74,6 +74,16 @@ app.get('/student',(req, res) => {
         res.json(data);
     });
 })
+app.get('/account/student',(req, res) => {
+    const sql = "SELECT * FROM account where role = 'student'";
+    db.query(sql, (err, data) => {
+        if (err) {
+            console.error('Database error:', err);
+            return res.status(500).json({ message: 'Internal server error' });
+        }
+        res.json(data);
+    });
+})
 app.get('/student/:id', (req, res) => {
     const student_id = req.params.id; 
     const sql = "SELECT * FROM students WHERE student_id = ?";
