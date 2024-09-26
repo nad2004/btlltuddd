@@ -9,10 +9,10 @@ app.use(cors());
 
 const JWT_SECRET = 'NAD';
 const db = mysql.createConnection({
-    host: 'fdb1029.awardspace.net',
-    user: '4532967_btl',
-    password: 'anhdung2004',
-    database: '4532967_btl'
+    host: 'sql12.freemysqlhosting.net',
+    user: 'sql12733751',
+    password: 'pxcg8iIsjA',
+    database: 'sql12733751'
 });
 
 
