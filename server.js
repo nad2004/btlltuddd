@@ -263,10 +263,10 @@ app.put('/student/update/:id', (req, res) => {
 app.put('/subject/update/:id', (req, res) => { 
     const sql = `
         UPDATE subjects 
-        SET student_code = ?, 
+        SET subject_code = ?, 
             subject_name = ?, 
             lecturer = ?, 
-        WHERE student_code = ?
+        WHERE subject_code = ?
     `;
     const values = [
         req.body.student_code, 
