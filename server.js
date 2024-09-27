@@ -269,7 +269,7 @@ app.put('/subject/update/:id', (req, res) => {
         WHERE subject_code = ?
     `;
     const values = [
-        req.body.student_code, 
+        req.body.subject_code, 
         req.body.subject_name, 
         req.body.lecturer, 
         req.params.id  
