@@ -265,7 +265,7 @@ app.put('/subject/update/:id', (req, res) => {
         UPDATE subjects 
         SET subject_code = ?, 
             subject_name = ?, 
-            lecturer = ?, 
+            lecturer = ? 
         WHERE subject_code = ?
     `;
     const values = [
